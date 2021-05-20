@@ -1,6 +1,9 @@
-var date = moment().format("dddd, MMMM Do");
-$("#currentDay").append(date);
-tasks = {};
+var dateToday = moment().format("dddd, MMMM Do");
+$("#currentDay").append(dateToday);
+tasks = {
+    [dateToday]: []
+};
+console.log(tasks)
 
 console.log($("#currentDay"), moment().format("H"), moment().format("dddd, MMMM Do"));
 
@@ -23,18 +26,56 @@ var scheduleFormat = function() {
         }
     });
 };
-$(".col-10").on("click", function(event) {
+$(".col-10").on("click", function() {
   //  console.log($(this).find($("p")));
-  //  console.log(event);
+    console.log(event);
  //  console.log($(this).has("p").length)
   //  console.log($("p").length)
-    var text = $(this).find("p")
-            .text()
-            .trim();
-    var textInput = $("<textarea>")
-            .val(text);
+    var text = $(this).find("p").text().trim();
+
+    var textInput = $("<textarea>").val(text).addClass("addNewTask");
         
     $(this).find("p").replaceWith(textInput);
     textInput.trigger("focus");
+
+    $("body").on("click", function(event) {
+        console.log($(this));
+        /*console.log($(this).closest(".row").find(".col-10"));
+        var newText = $(this).closest(".row").find("textarea").val().trim();
+
+        var hour = $(this).closest(".row").attr("id").replace("hour-","");
+
+        console.log(newText,hour, "in");
+
+        tasks[dateToday][hour-9] = newText;
+
+        var taskP = $("<p>")
+        .addClass("taskText")
+        .text(newText);
+
+        $(this).replaceWith(taskP);*/
+    });
+
+    /*$(".col-10").on("blur", "textarea", function() {
+        var taskP = $("<p>")
+        .addClass("taskText")
+        .text(text);
+
+        $(this).replaceWith(taskP);
+    })*/
 });
+/*$(".col-10").on("blur", "textarea", function() {
+    var text = $(this).val().trim();
+
+    var hour = $(this).closest(".row").attr("id").replace("hour-","");
+
+    console.log(text,hour);
+
+    tasks[dateToday][hour-9] = text;
+
+    console.log(tasks)
+    var taskP = $("<p>")
+        .addClass("taskText")
+        .text(text);
+});*/
 scheduleFormat();
