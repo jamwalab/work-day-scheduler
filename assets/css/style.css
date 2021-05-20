@@ -9,8 +9,10 @@ textarea{
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
+  /*border-left: 1px solid black;
+  padding: 10px;*/
+  width: 100%;
+  outline: none;
 }
 
 .jumbotron {
@@ -41,6 +43,10 @@ textarea{
   color: #000000;
   border-top: 1px dashed #000000;
   text-align: right;
+}
+
+.myTask {
+  border-left: 1px solid black;
 }
 
 .past {

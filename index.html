@@ -19,7 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css"/>
     <title>Work Day Scheduler</title>
   </head>
 
@@ -32,24 +32,26 @@
 
     <div class="container d-flex flex-column justify-content-between">
       <!-- Timeblocks go here -->
+      <!-----SINGLE ROW ELEMENTS----->
       <div class="row flex-nowrap" id="hour-9">
-        <div class="col-1 hour">
+        <div class="col-1 hour d-flex justify-content-end py-3">
           <p>9AM</p>
         </div>
-        <div class="col-10">
-
+        <div class="col-10 myTask d-flex p-3">
+          <p class="taskText">Test</p>
         </div>
         <div class="col-1 saveBtn text-center d-flex justify-content-center">
           <i class="saveImg bi bi-save-fill align-self-center pt-3">
           </i>
         </div>
       </div>
+      <!-----SINGLE ROW ELEMENTS----->
       <div class="row flex-nowrap" id="hour-10">
-        <div class="col-1 hour">
+        <div class="col-1 hour d-flex justify-content-end py-3">
           <p>10AM</p>
         </div>
-        <div class="col-10">
-
+        <div class="col-10 myTask d-flex p-3">
+          <p class="taskText"></p>
         </div>
         <div class="col-1 saveBtn text-center d-flex justify-content-center">
           <i class="saveImg bi bi-save-fill align-self-center pt-3">
