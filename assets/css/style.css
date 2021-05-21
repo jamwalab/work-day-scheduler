@@ -61,12 +61,12 @@ button {
 
 .present {
   background-color: #ff6961;
-  color: white;
+  color: rgb(90, 90, 90);
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
+  color: rgb(90, 90, 90);
 }
 
 .saveBtn {
