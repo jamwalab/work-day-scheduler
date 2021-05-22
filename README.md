@@ -1,7 +1,7 @@
 # Work Day Scheduler
 ## Version 1.0
 ### Built with HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP AND MOMENT
-### [Link to "Quiz" page](https://jamwalab.github.io/work-day-scheduler/)
+### [Link to "Work Day Scheduler" page](https://jamwalab.github.io/work-day-scheduler/)
 ![Preview](./assets/img/preview.gif)
 
 ### Project description
