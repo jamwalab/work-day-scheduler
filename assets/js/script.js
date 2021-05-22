@@ -6,7 +6,6 @@ $("#currentDay").append(dateToday);
 var createTask = function(arr) {
     $.each(arr, function(index, value) {
         var hourId = "#hour-" + (index+9);
-        console.log(hourId, $(hourId))
         $(hourId).find(".taskText").text(value);
     })
 }
@@ -15,7 +14,6 @@ var scheduleFormat = function() {
     //Check each .row class
     $(".row").each(function() {
         var hour = parseInt($(this).attr("id").replace("hour-",""));
-        console.log(moment().format("H"));
         //class changed based on hour
         if (parseInt(moment().format("H")) > hour) {
             $(this).find(".col-10").addClass("past");
@@ -53,7 +51,6 @@ var saveTasks = function() {
 }
 //-----TEXT EDIT IF CLICKED ON THE TASK AREA-----//
 $(".col-10").on("click", function() {
-    console.log($(this));
     var text = $(this).find("p").text().trim();
 
     var textInput = $("<textarea>").val(text).addClass("addNewTask");
@@ -74,9 +71,8 @@ $(".col-10").on("blur", "textarea", function() {
             var oldText = tasks[dateToday][hour-9];
             var taskP = $("<p>").addClass("taskText").text(oldText);
             theTextArea.replaceWith(taskP);
-            console.log(hour);
         }
-    }, 500);
+    }, 300);
 });
 //-----SAVE BUTTON - SAVES THE CORRESPONDING TASK WHEN CLICKED-----//
 $(".saveBtn").on("click", function(event) {
