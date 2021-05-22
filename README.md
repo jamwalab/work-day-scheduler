@@ -20,4 +20,4 @@
 * Using click event on the text space, taskarea is created.
 * Using the click event, if the corresponding save button is clicked, task gets saved.
 * For everything else, blur event is used to capture click or activities, which in turn coverts the text area back and places the original data there.
-* Activities inside the blur event are executed afte a delay of 500ms to avoid conflict with the save button click event. 
+* Activities inside the blur event are executed afte a delay of 300ms to avoid conflict with the save button click event. 

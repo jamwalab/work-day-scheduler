@@ -76,7 +76,7 @@ $(".col-10").on("blur", "textarea", function() {
             theTextArea.replaceWith(taskP);
             console.log(hour);
         }
-    }, 500);
+    }, 300);
 });
 //-----SAVE BUTTON - SAVES THE CORRESPONDING TASK WHEN CLICKED-----//
 $(".saveBtn").on("click", function(event) {
